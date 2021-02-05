@@ -2,17 +2,27 @@ import React from "react";
 import { Movie } from "../../App";
 import styles from "./Main.module.scss";
 import MovieCardList from "../MovieCardList"
+import Filter from "../Filter"
 
 interface Props {
   movies: {movie:Movie}[];
 }
 
-const Main: React.FC<Props> = ({movies}) => {
+interface Props {
+  setFilter: any;
+}
+
+const Main: React.FC<Props> = ({movies, setFilter}) => {
 
   return (
     <>
     <main className={styles.main}>
-      <h2 className={styles.now}>Now Playing</h2>
+      <section className={styles.head}>
+        <h2 className={styles.now}>Now Playing</h2>
+        <div className={styles.filter}>
+        <Filter setFilter={setFilter}/>
+        </div>
+      </section>
       <MovieCardList movies={movies}/>
     </main>
      
