@@ -29,7 +29,6 @@ function App() {
     fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=f523c216b4c1bac52a5cd3f701413350&language=en-US&page=1')
     .then((res) => res.json())
     .then((res) => {
-      console.log(filter)
       const cleanedMovies = res.results.map(cleanMovieData);
       if(filter==="unsorted"){
         setMovies(cleanedMovies)
@@ -43,18 +42,6 @@ function App() {
         })
         setMovies(sortedMovies)
       }
-
-
-      // const filterMovies = cleanedMovies.filter((movie:Movie) => {
-      //   if(filter==="All"){
-      //     return movie;
-      //   } else if(filter==="7"){
-      //     return  movie.vote_average > 7;
-      //   } else if (filter==="middle") {
-      //     return movie.vote_average < 7;
-      //   }
-      // })
-      // setMovies(filterMovies)
     })
     .catch((error) => {
       console.log(error);
