@@ -66,7 +66,9 @@ function App() {
   
       </nav>
       <main className="main">
-        <Main movies={movies}/>
+        <Main 
+        movies={movies}
+        setFilter={setFilter}/>
       </main>
     </>
   );

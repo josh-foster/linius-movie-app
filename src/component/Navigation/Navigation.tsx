@@ -10,12 +10,7 @@ const Navigation: React.FC<Props> = ({ setFilter}) => {
   return (
     <>
       <nav className={styles.nav}>
-        <h1>Linius Movies</h1>
-        
-          <Filter 
-          setFilter={setFilter}
-          />
-       
+        <h1>LMDb</h1>
       </nav>
     </>
   );

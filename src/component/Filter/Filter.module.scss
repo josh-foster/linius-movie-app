@@ -8,6 +8,7 @@
     h3{
         font-family: 'Bebas Neue', cursive;
         font-size: 30px;
+        color: white;
     }
     select{
         height: 50%;
@@ -17,3 +18,12 @@
 
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .filter{
+        width: 100%;
+        h3{
+            font-size: 1.25rem;
+        }
+    }
+  }
