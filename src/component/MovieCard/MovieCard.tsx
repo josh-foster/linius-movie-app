@@ -8,16 +8,16 @@ interface Props {
 
 const MovieCard: React.FC<Props> = ({movie}) => {
 
-const poster:string = `https://image.tmdb.org/t/p/w200${movie.poster_path}`
+  const poster:string = `https://image.tmdb.org/t/p/w200${movie.poster_path}`
 
   return (
     <>
-    <article className={styles.card}>
-      <h2>{movie.original_title}</h2>
-      <img src={poster} alt=""/>
-      <p> Score: {movie.vote_average}/10 </p>
-    </article>
-  </>
+      <article className={styles.card}>
+        <h2>{movie.original_title}</h2>
+        <img src={poster} alt=""/>
+        <p>{movie.vote_average}/10 </p>
+      </article>
+    </>
   );
 };
 

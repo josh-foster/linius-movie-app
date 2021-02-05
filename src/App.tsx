@@ -33,8 +33,8 @@ function App() {
       if(filter==="unsorted"){
         setMovies(cleanedMovies)
       } else if (filter==="sorted"){
-        const sortedMovies = cleanedMovies.sort((a:any,b:any) => {
-          if(a.vote_average < b.vote_average){
+        const sortedMovies = cleanedMovies.sort((movie1:Movie,movie2:Movie) => {
+          if(movie1.vote_average < movie2.vote_average){
             return 1
           } else {
             return -1
@@ -56,14 +56,10 @@ function App() {
     getMovies();
   },[filter])
 
-
   return (
     <>
       <nav className="nav">
-        <Navigation
-        setFilter={setFilter}
-        />
-  
+        <Navigation/>
       </nav>
       <main className="main">
         <Main 

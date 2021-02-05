@@ -6,26 +6,22 @@ import Filter from "../Filter"
 
 interface Props {
   movies: {movie:Movie}[];
-}
-
-interface Props {
-  setFilter: any;
+  setFilter: string;
 }
 
 const Main: React.FC<Props> = ({movies, setFilter}) => {
 
   return (
     <>
-    <main className={styles.main}>
-      <section className={styles.head}>
-        <h2 className={styles.now}>Now Playing</h2>
-        <div className={styles.filter}>
-        <Filter setFilter={setFilter}/>
-        </div>
-      </section>
-      <MovieCardList movies={movies}/>
-    </main>
-     
+      <main className={styles.main}>
+        <section className={styles.head}>
+          <h2 className={styles.now}>Now Playing</h2>
+          <div className={styles.filter}>
+          <Filter setFilter={setFilter}/>
+          </div>
+        </section>
+        <MovieCardList movies={movies}/>
+      </main>
     </>
   );
 };
