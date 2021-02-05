@@ -13,7 +13,7 @@ export type Movie = {
 function App() {
 
   const [movies, setMovies] = useState<{movie:Movie}[]>([]);
-  const [filter, setFilter] = useState<string>("All")
+  const [filter, setFilter] = useState<string>("unsorted")
 
   const cleanMovieData = (movie:Movie) => {
     const cleanedMovie = {
@@ -31,16 +31,30 @@ function App() {
     .then((res) => {
       console.log(filter)
       const cleanedMovies = res.results.map(cleanMovieData);
-      const filterMovies = cleanedMovies.filter((movie:Movie) => {
-        if(filter==="All"){
-          return movie;
-        } else if(filter==="7"){
-          return  movie.vote_average > 7;
-        } else if (filter==="middle") {
-          return movie.vote_average < 7;
-        }
-      })
-      setMovies(filterMovies)
+      if(filter==="unsorted"){
+        setMovies(cleanedMovies)
+      } else if (filter==="sorted"){
+        const sortedMovies = cleanedMovies.sort((a:any,b:any) => {
+          if(a.vote_average < b.vote_average){
+            return 1
+          } else {
+            return -1
+          }
+        })
+        setMovies(sortedMovies)
+      }
+
+
+      // const filterMovies = cleanedMovies.filter((movie:Movie) => {
+      //   if(filter==="All"){
+      //     return movie;
+      //   } else if(filter==="7"){
+      //     return  movie.vote_average > 7;
+      //   } else if (filter==="middle") {
+      //     return movie.vote_average < 7;
+      //   }
+      // })
+      // setMovies(filterMovies)
     })
     .catch((error) => {
       console.log(error);

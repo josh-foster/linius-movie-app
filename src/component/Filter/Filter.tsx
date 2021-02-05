@@ -16,11 +16,10 @@ const Filter: React.FC<Props> = ({setFilter}) => {
   return (
     <>
     <section className={styles.filter}>
-      <h3>Filter by score:</h3>
+      <h3>Sort by Viewer rating:</h3>
         <select onChange={handleChange} name="scores" id="scores">
-          <option value="All">All</option>
-          <option  value="7">Over 7</option>
-          <option value="middle">7 and below</option>
+          <option value="unsorted">Unsorted</option>
+          <option  value="sorted">Sorted</option>
         </select>
     </section>
       
