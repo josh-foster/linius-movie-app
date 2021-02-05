@@ -1,0 +1,12 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .now{
+        color: white;
+        margin-top: 20px;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 3rem;
+    }
+}

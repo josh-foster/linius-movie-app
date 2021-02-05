@@ -11,8 +11,11 @@ const Main: React.FC<Props> = ({movies}) => {
 
   return (
     <>
-      <h2>Now Playing</h2>
+    <main className={styles.main}>
+      <h2 className={styles.now}>Now Playing</h2>
       <MovieCardList movies={movies}/>
+    </main>
+     
     </>
   );
 };

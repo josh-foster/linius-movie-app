@@ -1,5 +1,5 @@
 .filter{
-    width:350px;
+    width:250px;
     margin-right: 40px ;
     display: flex;
     justify-content: space-between;
@@ -15,8 +15,5 @@
         color: white;
         font-family: 'Courier New', Courier, monospace;
 
-        select:focus > option:checked { 
-            background: #000 !important;
-        }
     }
 }
