@@ -1,0 +1,22 @@
+.filter{
+    width:300px;
+    margin-right: 40px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    h3{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 30px;
+    }
+    select{
+        height: 50%;
+        background-color: black;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+
+        select:focus > option:checked { 
+            background: #000 !important;
+        }
+    }
+}
