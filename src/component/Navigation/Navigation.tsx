@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./navigation.module.css";
+import styles from "./Navigation.module.scss";
 import Filter from '../Filter'
 
 interface Props {

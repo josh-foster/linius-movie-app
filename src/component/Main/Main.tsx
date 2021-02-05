@@ -11,6 +11,7 @@ const Main: React.FC<Props> = ({movies}) => {
 
   return (
     <>
+      <h2>Now Playing</h2>
       <MovieCardList movies={movies}/>
     </>
   );
