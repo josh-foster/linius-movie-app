@@ -1,38 +1,44 @@
 .card{
     height: 100%;
-    width: 100%;
-    background-color:white;
-
-    
-    
-    h2{
-      font-size: 1rem;
-      font-family: 'Bebas Neue', cursive;
-      font-weight: bold;
-      width: 100%;
-      height: 5%;
-      text-align: center;
-      background-color:white;
-      
-    }
-
-    .rating{
-      width: 100%;
-      height: 5%;
-      background-color:white;
+    width: 100%; 
+    .info{
       display: flex;
-      justify-content: center;
-      align-items: center;
-      p{ 
+      justify-content: space-between;
+      margin-top: 5px;
+      h2{
+        color: rgba(255, 255, 255, 0.815);
+        font-size: 1rem;
         font-family: 'Bebas Neue', cursive;
         font-weight: bold;
-        margin-right: 5px;
+        text-align: center;
+        
       }
-      .star{
-        width: 12px;
-        height: 12px;
-        margin-left:5px;
-      }
+      .rating{
+        
+        color: white;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        justify-content: center;
+        p{ 
+          color: #ffcc00dc;
+          display: flex;
+          font-family: 'Bebas Neue', cursive;
+          font-weight: bold;
+          margin-right: 5px;
+        }
+        .star{
+          opacity: 0.85;
+          width: 12px;
+          height: 12px;
+          margin-left:5px;
+          padding-bottom: 3px;
+        
+    }
+   
+
+   }
+   
     }
    
     
@@ -43,7 +49,7 @@
       justify-content: center;
       align-items: center;
       img{
-        height: 400px;
+      height: 400px;
       width: 275px;
       }
     }

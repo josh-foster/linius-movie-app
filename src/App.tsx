@@ -60,17 +60,17 @@ function App() {
   return (
     <>
       <motion.nav
-      animate={{y:0}}
-      initial={{y:-500}}
-      transition={{duration:2, delay:0.25, type: 'tween'}}
+      animate={{opacity:1}}
+      initial={{opacity:0}}
+      transition={{duration:1.5, type: 'tween', ease:'easeIn'}}
       className="nav"
       >
         <Navigation/>
       </motion.nav>
       <motion.main
       animate={{opacity:1, y:0}}
-      initial={{opacity:0, y:300}}
-      transition={{duration:1.5,delay:1.5, type: 'tween'}}
+      initial={{opacity:0, y:250}}
+      transition={{duration:1.5, type: 'tween'}}
       className="main"
       >
         <Main 

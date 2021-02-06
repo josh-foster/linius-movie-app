@@ -13,12 +13,15 @@ const MovieCard: React.FC<Props> = ({movie}) => {
   return (
     <>
       <article className={styles.card}>
-        <h2>{movie.original_title}</h2>
         <img className={styles.poster} src={poster} alt=""/>
-        <section className={styles.rating}>
-          <p>{movie.vote_average}</p>
-          <img className={styles.star} src="star.png" alt=""/>
+        <section className={styles.info}>
+          <h2>{movie.original_title}</h2>
+          <section className={styles.rating}>
+            <p>{movie.vote_average}</p>
+            <img className={styles.star} src="star.png" alt=""/>
+          </section>
         </section>
+        
       </article>
 
       
