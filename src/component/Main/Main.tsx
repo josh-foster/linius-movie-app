@@ -3,10 +3,11 @@ import { Movie } from "../../App";
 import styles from "./Main.module.scss";
 import MovieCardList from "../MovieCardList"
 import Filter from "../Filter"
+import { motion } from 'framer-motion';
 
 interface Props {
   movies: {movie:Movie}[];
-  setFilter: string;
+  setFilter: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Main: React.FC<Props> = ({movies, setFilter}) => {
@@ -15,10 +16,10 @@ const Main: React.FC<Props> = ({movies, setFilter}) => {
     <>
       <main className={styles.main}>
         <section className={styles.head}>
-          <h2 className={styles.now}>Now Playing</h2>
-          <div className={styles.filter}>
+          <motion.h2 animate={{opacity:1}} initial={{opacity:0}} transition={{delay:3, duration:2}} className={styles.now}>Now Playing</motion.h2>
+          <motion.div animate={{opacity:1}} initial={{opacity:0}} transition={{delay:4, duration:2}} className={styles.filter}>
           <Filter setFilter={setFilter}/>
-          </div>
+          </motion.div>
         </section>
         <MovieCardList movies={movies}/>
       </main>

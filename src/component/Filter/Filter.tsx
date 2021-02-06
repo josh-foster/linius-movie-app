@@ -2,13 +2,13 @@ import React from "react";
 import styles from "./Filter.module.scss";
 
 interface Props {
-  setFilter: any;
+  setFilter: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Filter: React.FC<Props> = ({setFilter}) => {
 
-  const handleChange = (e: any) => {
-    setFilter(e.target.value)
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFilter(e.currentTarget.value);
   }
 
   return (
