@@ -16,9 +16,21 @@ const Main: React.FC<Props> = ({movies, setFilter}) => {
     <>
       <main className={styles.main}>
         <section className={styles.head}>
-          <motion.h2 animate={{opacity:1}} initial={{opacity:0}} transition={{delay:3, duration:2}} className={styles.now}>Now Playing</motion.h2>
-          <motion.div animate={{opacity:1}} initial={{opacity:0}} transition={{delay:4, duration:2}} className={styles.filter}>
-          <Filter setFilter={setFilter}/>
+          <motion.h2 
+          animate={{opacity:1}} 
+          initial={{opacity:0}} 
+          transition={{delay:3, duration:2}} 
+          className={styles.now}
+          >
+            Now Playing
+          </motion.h2>
+          <motion.div 
+          animate={{opacity:1}}
+          initial={{opacity:0}}
+          transition={{delay:4, duration:2}}
+          className={styles.filter}
+          >
+            <Filter setFilter={setFilter}/>
           </motion.div>
         </section>
         <MovieCardList movies={movies}/>
