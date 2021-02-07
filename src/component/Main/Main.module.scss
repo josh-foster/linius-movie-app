@@ -1,15 +1,11 @@
-
-
-
 .main{
-   
     .head{
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
         width: 90%;
         margin: auto;
-       
+
         .now{
             color: white;
             text-decoration: underline;
@@ -20,21 +16,18 @@
         }
         .filter{
             margin-top: 20px;
+            }
         }
-    }
     }
     @media only screen and (max-width: 600px) {
         .main {
-            
             .head{
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 .now{
                     font-size: 1.5rem;
-                  }
+                }
             }
-          
         }
-      }
-    
+    }
