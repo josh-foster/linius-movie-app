@@ -18,7 +18,7 @@ const Main: React.FC<Props> = ({movies, setFilter}) => {
         <section className={styles.head}>
           <motion.h2 
           animate={{opacity:1}} 
-          initial={{opacity:0}} 
+          initial={{opacity:0.2}} 
           transition={{delay:1, duration:2}} 
           className={styles.now}
           >

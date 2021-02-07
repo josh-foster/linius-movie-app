@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./MovieCardList.module.scss";
 import MovieCard from '../MovieCard'
 import { Movie } from "../../App";
+import { motion } from 'framer-motion';
 
 interface Props {
   movies: {movie:Movie}[];
@@ -9,10 +10,12 @@ interface Props {
 
 const MovieCardList: React.FC<Props> = ({movies}) => {
 
+  let opacityDelay:number = 0.2
+
   const getMovieTsx = (movie:any) => (
-    <div className={styles.card} key={movie.id}>
-      <MovieCard movie={movie} />
-    </div>
+    <motion.div whileHover={{scale:1.1, textShadow:"0px 0 px 8px rgb(255,255,255)"}} transition={{duration:0.5, type:"tween"}} className={styles.card} key={movie.id}>
+      <MovieCard opacityDelay={opacityDelay += 0.2} movie={movie} />
+    </motion.div>
   );
 
   return (

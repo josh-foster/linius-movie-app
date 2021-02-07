@@ -17,7 +17,7 @@ const Filter: React.FC<Props> = ({setFilter}) => {
         <h3>Sort by rating:</h3>
           <select onChange={handleChange} name="scores" id="scores">
             <option value="unsorted">Unsorted</option>
-            <option  value="sorted">Sorted</option>
+            <option  value="sorted">Highest First</option>
           </select>
       </section> 
     </>
