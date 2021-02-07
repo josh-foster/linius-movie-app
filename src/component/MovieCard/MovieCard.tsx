@@ -16,8 +16,8 @@ const MovieCard: React.FC<Props> = ({movie,opacityDelay}) => {
   return (
     <>
       <motion.article 
-      animate={{opacity:1}} 
-      initial={{opacity:0}} 
+      animate={{opacity:1, scale:1}} 
+      initial={{opacity:0, scale: 0.75}} 
       transition={{delay:opacityDelay, duration:2}} 
       className={styles.card}>
         <img className={styles.poster} src={poster} alt=""/>

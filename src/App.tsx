@@ -69,8 +69,8 @@ function App() {
       </motion.nav>
       <motion.main
       animate={{opacity:1, y:0}}
-      initial={{opacity:0, y:250}}
-      transition={{duration:1.5, type: 'tween'}}
+      initial={{opacity:0, y:0}}
+      transition={{duration:1, type: 'tween'}}
       className="main"
       >
         <Main 

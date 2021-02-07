@@ -13,7 +13,7 @@ const MovieCardList: React.FC<Props> = ({movies}) => {
   let opacityDelay:number = 0.2
 
   const getMovieTsx = (movie:any) => (
-    <motion.div whileHover={{scale:1.1, textShadow:"0px 0 px 8px rgb(255,255,255)"}} transition={{duration:0.5, type:"tween"}} className={styles.card} key={movie.id}>
+    <motion.div whileHover={{scale:1.1}} transition={{duration:0.5, type:"tween"}} className={styles.card} key={movie.id}>
       <MovieCard opacityDelay={opacityDelay += 0.2} movie={movie} />
     </motion.div>
   );
