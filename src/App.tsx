@@ -3,6 +3,13 @@ import Navigation from './component/Navigation'
 import Main from './component/Main'
 import { motion } from 'framer-motion';
 
+export type Movie = {
+  id: number,
+  original_title: string,
+  poster_path: string,
+  vote_average: number
+}
+
 function App() {
 
   return (
