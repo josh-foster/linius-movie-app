@@ -3,6 +3,8 @@ import styles from "./MovieCard.module.scss";
 import { Movie } from "../../App";
 import { motion } from 'framer-motion';
 
+
+
 interface Props {
   movie: Movie;
   opacityDelay:number;
