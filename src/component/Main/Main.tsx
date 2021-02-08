@@ -4,12 +4,7 @@ import MovieCardList from "../MovieCardList"
 import Filter from "../Filter"
 import { motion } from 'framer-motion';
 
-export type Movie = {
-  id: number,
-  original_title: string,
-  poster_path: string,
-  vote_average: number
-}
+
 
 const Main: React.FC = () => {
 
