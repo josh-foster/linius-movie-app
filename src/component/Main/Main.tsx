@@ -3,7 +3,7 @@ import styles from "./Main.module.scss";
 import MovieCardList from "../MovieCardList"
 import Filter from "../Filter"
 import { motion } from 'framer-motion';
-
+import { Movie } from "../../App";
 
 
 const Main: React.FC = () => {
@@ -34,7 +34,7 @@ const Main: React.FC = () => {
           return -1;
         }
       })
-      setMovies(sortedMovies)
+      setMovies(sortedMovies);
     }
   }
 
