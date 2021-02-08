@@ -14,7 +14,7 @@ const Filter: React.FC<Props> = ({setFilter}) => {
   return (
     <>
       <section className={styles.filter}>
-        <h3>Sort by rating:</h3>
+        <h3>Sort by rating</h3>
           <select onChange={handleChange} name="scores" id="scores">
             <option value="unsorted">Unsorted</option>
             <option  value="sorted">Top rated first</option>
